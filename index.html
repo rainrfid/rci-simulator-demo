@@ -1,0 +1,80 @@
+<!--
+  ~ Copyright (c) 2024 of RAIN Alliance and Sieveo GmbH
+  ~
+  ~ Author: Steyn Geldenhuys (Sieveo GmbH)
+  ~
+  ~ Contribution made to the RAIN Alliance by Sieveo GmbH.
+  ~
+  ~ This file is part of the RCI-Simulator project.
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program. If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <title>RCI SIM</title>
+    <link rel="icon" type="image/svg+xml"
+          href="/composeResources/org.rainrfid.simulator.demo.generated.resources/drawable/rain_logo_vertical_white_background.svg"/>
+    <script type="application/javascript" src="rci-simulator.js"></script>
+    <link rel="manifest" href="manifest.json"/>
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #logo {
+            width: 512px;
+            height: 512px;
+            background: url("rain_logo.png") no-repeat center center;
+            background-size: contain;
+            animation: pulse 2s infinite;
+        }
+
+        #canvas {
+            display: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="logo"></div>
+<canvas id="canvas"></canvas>
+<script>
+    function hideSplashScreen() {
+        console.log("Hiding splash screen");
+        document.getElementById('logo').style.display = 'none';
+        document.getElementById('canvas').style.display = 'block';
+    }
+</script>
+</body>
+</html>

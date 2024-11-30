@@ -1,0 +1,22 @@
+{
+  "name": "RCI Sim",
+  "icons": [
+    {
+      "src": "/composeResources/org.rainrfid.simulator.demo.generated.resources/drawable/rain_logo_vertical_white_background.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "white",
+  "screenshots": [
+    {
+      "src": "rci_sim_desktop_screenshot.png",
+      "type": "image/png",
+      "sizes": "1920x1080",
+      "form_factor": "wide"
+    }
+  ]
+}
